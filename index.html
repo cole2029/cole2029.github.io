@@ -1,41 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
 
-<style>
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* ✅ NEW COLOR SYSTEM */
-:root {
-  --bg: #FDF9F6;
-  --bg2: #DBB8AA;
-  --primary: #416285;
-  --accent: #8BC6CA;
-  --highlight: #EFCD52;
+    :root {
+      --bg: #FDF9F6;
+      --bg2: #DBB8AA;
+      --primary: #416285;
+      --accent: #8BC6CA;
+      --highlight: #EFCD52;
 
-  --text: #416285;
-  --muted: #8BC6CA;
-  --line: rgba(65,98,133,0.15);
-}
+      --text: #416285;
+      --muted: #8BC6CA;
+      --line: rgba(65,98,133,0.15);
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-/* ✅ NAV */
-nav {
-  padding: 20px;
-  border-bottom: 1px solid var(--line);
-}
+    nav {
+      padding: 20px;
+      border-bottom: 1px solid var(--line);
+    }
 
-nav h1 {
+    nav h1 {
+      color: var(--primary);
+    }
+
+    .hero {
+      padding: 60px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: var(--highlight);
+      color: black;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--line);
+      padding: 20px;
+      border-radius: 12px;
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--highlight);
+    }
+
+    .card h3 {
+      color: var(--primary);
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid var(--line);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h1>Your Name</h1>
+  </nav>
+
+  <section class="hero">
+    <h2>Hi, I'm a Developer</h2>
+    <p>I build clean and modern web apps.</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="card">
+      <h3>Project 1</h3>
+      <p>Brief description of your project.</p>
+    </div>
+
+    <div class="card">
+      <h3>Project 2</h3>
+      <p>Brief description of your project.</p>
+    </div>
+
+    <div class="card">
+      <h3>Project 3</h3>
+      <p>Brief description of your project.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Your Name</p>
+  </footer>
+
+</body>
+</html>
